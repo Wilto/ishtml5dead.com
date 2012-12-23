@@ -14,59 +14,5 @@
 </head>
 <body>
 	<h1>HTML5 is <strong>DEAD</strong></h1>
-	<canvas></canvas>
-
-	<script type="text/javascript">
-	// Adapted from http://codepen.io/moklick/pen/zKleC  
-
-	var psssh = ( function () {
-	        var canvas,
-	        	WIDTH,
-	        	HEIGHT,
-	        	screens = [],
-	        	ctx,
-	        	init = function () {
-					var canvas = document.getElementsByTagName( "canvas" )[ 0 ];
-
-					canvas.width = WIDTH = 400;
-					canvas.height = HEIGHT = 400;
-
-					ctx = canvas.getContext( "2d" );
-					ctx.fillRect( 0, 0, WIDTH, HEIGHT );
-					
-					makeScreens();
-				},
-				makeScreens = function() {
-					for ( var i = 0; i < 4; i++ ) {
-						var imgData = ctx.getImageData( 0, 0, WIDTH, HEIGHT ),
-							pix = imgData.data;
-
-						for ( var p = 0, pl = pix.length; p < pl; p += 4 ) {
-							var color = ( Math.random() * 255 ) + 40;
-							
-							pix[ p ] = color;
-							pix[ p + 1 ] = color;
-							pix[ p + 2 ] = color;
-						}
-						ctx.putImageData( imgData, 0, 0);
-						screens.push( imgData );
-					}
-
-					var j = 0;
-					setInterval( function() {
-						j = ( j == 3 ) ? 0 : j + 1;
-						ctx.putImageData( screens[ j ], 0, 0);
-					}, 30 );
-					
-					return screens;
-				};
-
-	        return {
-	            init: init
-	        };
-	    }());
-
-	    psssh.init();
-    </script>
 </body>
 </html>
