@@ -1,0 +1,43 @@
+body {
+	display: table;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+	z-index: 1;
+}
+h1 {
+	display: block;
+	font: bold 13em/1 sans-serif;
+	text-align: center;
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	font: bold 5.5em/1 sans-serif;
+	left: 0;
+	top: 0;
+	text-align: center;
+	z-index: 3;
+	white-space: pre-wrap;
+}
+@media screen and (min-width: 25em) {
+	h1 {
+		font: bold 8em/1 sans-serif;
+	}
+}
+@media screen and (min-width: 35em) {
+	h1 {
+		font: bold 9.5em/1 sans-serif;
+	}
+}
+@media screen and (min-width: 40em) {
+	h1 {
+		font: bold 13em/1 sans-serif;
+	}
+}
+@media screen and (min-width: 60em) {
+	h1 {
+		font: bold 13em/1 sans-serif;
+	}
+}

@@ -1,0 +1,11 @@
+body {
+  background: #a9b6c8;
+}
+
+h1 {
+	color: #eaf0f7;
+	text-shadow: 0 0 3px rgba(64,100,138,.3), 0 1px 4px #3b5c7f, 0 8px 18px rgba(64,100,138,.4);
+    -webkit-animation-name: turnonlights;
+    -webkit-animation-duration: 1.0s;
+    -webkit-animation-fill-mode: both;
+}
