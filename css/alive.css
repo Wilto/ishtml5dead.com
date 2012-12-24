@@ -1,11 +1,139 @@
 body {
-  background: #a9b6c8;
+	background: #032e92 url(_img/cardboard.png);
+	-webkit-animation: lit 2.5s linear;
+	-webkit-animation-direction: forwards;
+	-webkit-animation-timing-function: steps(3);
+
+	-moz-animation: lit 2.5s linear;
+	-moz-animation-direction: forwards;
+	-moz-animation-timing-function: steps(3);
+
+	animation: lit 2s linear;
+	animation-direction: forwards;
+	animation-timing-function: steps(3);
+
+}
+body:after {
+	content: " ";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	background-image: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 1) 100%);
+	background-image: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 1) 100%);
+	background-image: radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 1) 100%);
 }
 
 h1 {
-	color: #eaf0f7;
-	text-shadow: 0 0 3px rgba(64,100,138,.3), 0 1px 4px #3b5c7f, 0 8px 18px rgba(64,100,138,.4);
-    -webkit-animation-name: turnonlights;
-    -webkit-animation-duration: 1.0s;
-    -webkit-animation-fill-mode: both;
+	color: #c7fffb;
+	text-shadow: 0 0 150px #1b69e5, 
+		3px 3px 10px rgba(0, 0, 0, .25), 
+		0 0 100px rgba(100, 170, 255, .5), 
+		0 0 200px #001be6, 
+		0 0 700px #fff, 
+		5px 7px 3px rgba(0, 0, 0, .15);
+	font-weight: normal;
+	font-family: "Quicksand", sans-serif;
+	-webkit-animation: lights 2.5s linear;
+	-webkit-animation-direction: forwards;
+	-webkit-animation-timing-function: steps(1);
+
+	-moz-animation: lights 2.5s linear;
+	-moz-animation-direction: forwards;
+	-moz-animation-timing-function: steps(1);
+
+	animation: lights 2s linear;
+	animation-direction: forwards;
+	animation-timing-function: steps(1);
+}
+h1 strong {
+	font-weight: normal;
+}
+span {
+	display: inline;
+	max-height: 100px;
+	overflow: visible;
+}
+@-webkit-keyframes lit {
+	0%, 30%, 32%, 75%, 80%, 97%, 100% {
+		background-color: #032e92;
+	}
+	10%, 28%, 34%, 70%, 78%, 81%, 95%, 98% {
+		background-color: #111;
+	}
+}
+@-moz-keyframes lit {
+	0%, 30%, 32%, 75%, 80%, 97%, 100% {
+		background-color: #032e92;
+	}
+	10%, 28%, 34%, 70%, 78%, 81%, 95%, 98% {
+		background-color: #111;
+	}
+}
+@keyframes lit {
+	0%, 30%, 32%, 75%, 80%, 97%, 100% {
+		background-color: #032e92;
+	}
+	10%, 28%, 34%, 70%, 78%, 81%, 95%, 98% {
+		background-color: #111;
+	}
+}
+
+@-webkit-keyframes lights {
+	0%, 30%, 32%, 75%, 80%, 97%, 100% {
+		color: #9cfffa;
+		text-shadow: 0 0 150px #1b69e5, 
+		3px 3px 10px rgba(0, 0, 0, .25), 
+		0 0 100px rgba(100, 170, 255, .5), 
+		0 0 200px #001be6, 
+		0 0 700px #fff, 
+		5px 5px 5px rgba(0, 0, 0, 0.9);
+	}
+	10%, 28%, 34%, 70%, 78%, 81%, 95%, 98% {
+		color: #222;
+		text-shadow: none;
+	}
+}
+@-moz-keyframes lights {
+	0%, 30%, 32%, 75%, 80%, 97%, 100% {
+		color: #9cfffa;
+		text-shadow: 0 0 150px #1b69e5, 
+		3px 3px 10px rgba(0, 0, 0, .25), 
+		0 0 100px rgba(100, 170, 255, .5), 
+		0 0 200px #001be6, 
+		0 0 700px #fff, 
+		5px 5px 5px rgba(0, 0, 0, 0.9);
+	}
+	10%, 28%, 34%, 70%, 78%, 81%, 95%, 98% {
+		color: #222;
+		text-shadow: none;
+	}
+}
+@keyframes lights {
+	0%, 30%, 32%, 75%, 80%, 97%, 100% {
+		color: #9cfffa;
+		text-shadow: 0 0 150px #1b69e5, 
+		3px 3px 10px rgba(0, 0, 0, .25), 
+		0 0 100px rgba(100, 170, 255, .5), 
+		0 0 200px #001be6, 
+		0 0 700px #fff, 
+		5px 5px 5px rgba(0, 0, 0, 0.9);
+	}
+	10%, 28%, 34%, 70%, 78%, 81%, 95%, 98% {
+		color: #222;
+		text-shadow: none;
+	}
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('_fonts/quicksand_book-webfont.eot');
+    src: url('_fonts/quicksand_book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('_fonts/quicksand_book-webfont.woff') format('woff'),
+         url('_fonts/quicksand_book-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }

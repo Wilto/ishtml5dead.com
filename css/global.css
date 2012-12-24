@@ -20,7 +20,9 @@ h1 {
 	text-align: center;
 	z-index: 3;
 	white-space: pre-wrap;
+	position: relative;
 }
+
 @media screen and (min-width: 25em) {
 	h1 {
 		font: bold 8em/1 sans-serif;
